@@ -1,0 +1,231 @@
+html, body {
+background-color: #2E2E2E;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+#settingsTab {
+    position: relative;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+    left: -18%;
+    z-index: 1;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #D1D1D1;
+    -webkit-transition: left 1s ease;
+    transition: left 1s ease;
+}
+
+#settingsTab::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+#placeholder, #settings {
+    /* display: none; */
+    font-size: 2rem;
+    color: rgb(46, 46, 46);
+    font-weight: lighter;
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+
+#sizeDis, #spaceDis {
+    position: relative;
+    width: 100%;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+#spaceDis {
+    height: 55px;
+}
+
+.fullBarDown {
+    position: absolute;
+    bottom: 0;
+    width: 75%;
+    height: 10px;
+    background-color: white;
+}
+
+.fullBarUp {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 30%;
+    height: 10px;
+    background-color: #1C94FF;
+}
+
+.percent {
+    position: absolute;
+    right: 0;
+}
+
+#messageEnc {
+    width: 100%;
+    height: 100px;
+}
+
+#cont {
+    height: 18rem;
+    background-color: white;
+    border-radius: 0.6rem;
+}
+
+.settFormer {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#spaceMesg, #spaceFiles {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+#imgAdd, #fileAdd, #btnExp, #btnExpAll {
+    color: white;
+    height: 4rem;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: lighter;
+    background-color: #2E2E2E;
+    border: #1C94FF 4px solid;
+    border-radius: 0.6rem;
+}
+
+#btnExp, #btnExpAll {
+    background-color: rgb(29, 90, 34);
+    border-color: #2E2E2E;
+
+}
+
+#output {
+    height: auto;
+    width: 80%;
+}
+
+.imgItem {
+    width: 90%;
+    height: 50px;
+    font-size: 1rem;
+}
+
+.imgFocus {
+    background-color: rgb(69, 122, 168);
+}
+
+.hidden {
+    display: none;
+}
+
+.remove {
+    height: 50%;
+    /* margin: auto 0; */
+    background-color: #2E2E2E;
+    border: #1C94FF solid 0.1rem;
+    color: red;
+    z-index: 2;
+}
+
+#errorMessage {
+    color: red;
+    font-weight: lighter;
+}
+
+#imageCol {
+    position: relative;
+    border: #1C94FF dashed 0.5rem;
+    border-radius: 15px;
+    right: 0;
+    float: right;
+    width: 80%;
+    height: 100%;
+    -webkit-transition: right 1s ease;
+    transition: right 1s ease;
+}
+
+#btnPaste{
+    width: 150px;
+    font-size: 2rem;
+    background-color: #2E2E2E;
+    border: #1C94FF 4px solid;
+    border-radius: 0.6rem;
+}
+
+#imageCol.imageToggle {
+    right: 10%;
+}
+#settingsTab.settingToggle {
+    left: 0;
+}
+
+#infoText {
+    color: white;
+    font-size: 3rem;
+}
+
+#infoText i {
+    color: rgba(28, 149, 255, 0.452);
+    font-size: 5rem;
+}
+
+#linkIn {
+    width: 80%;
+    border-radius: 5px;
+}
+
+#nameHolder {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: #1C94FF;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-size: 3rem;
+    border: #1C94FF solid 5px;
+    border-radius: 10px;
+}
+
+.dragOn {
+    background-color: rgb(158, 158, 158);
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    color: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* #nameHolder h1 {
+    position: relative;
+    left: -200px;
+    -webkit-transition: left 1s;
+    transition: left 1s;
+}
+
+#nameHolder h1{
+    left: 0px;
+} */
