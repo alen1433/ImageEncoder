@@ -33,10 +33,28 @@ if(isAdvancedUpload){
         $hodl.removeClass('dragOn');
     })
     .on('drop', function(e) {
-        droppedFiles = e.originalEvent.dataTransfer.files;
         var image = document.getElementById('output');
-        image.src = URL.createObjectURL(droppedFiles[0]);
-        displaySettings();
+        droppedFiles = e.originalEvent.dataTransfer.files;
+        if(x.files.length == 1 ){
+            image.src = URL.createObjectURL(droppedFiles[0]);
+            if(document.getElementById("cont").childNodes.length == 0){
+                displaySettings();
+            }
+            // imgItem[0].firstChild.firstChild.src = URL.createObjectURL(x.files[0]);
+            createMiniImage(image.src, droppedFiles[0].name, true);
+            firstCheck();
+        } else {
+            image.src = URL.createObjectURL(droppedFiles[0]);
+            if(document.getElementById("cont").childNodes.length == 0){
+                displaySettings();
+            }
+            createMiniImage(image.src, droppedFiles[0].name, true);
+            firstCheck();
+            for (var i = 1; i < droppedFiles.length; i++) {
+                //success
+                createMiniImage(URL.createObjectURL(droppedFiles[i]), droppedFiles[i].name, false);
+            }
+        }
     });
 }
 
