@@ -197,7 +197,15 @@ function setSize(){
 function updateCapacity() {
     var img = document.getElementById('output');
     var textarea = document.getElementById('messageEnc');
-    document.getElementById('spaceCount').innerHTML='('+textarea.value.length + '/' + steg.getHidingCapacity(img) +' chars)';
+    var prgBar = document.getElementById("fullBar");
+    var cap = steg.getHidingCapacity(img);
+    if (cap > 1000){
+        cap = 1000;
+    }
+    var calc = Math.floor((textarea.value.length / cap)*100);
+    prgBar.style.width = calc + "%";
+    document.getElementById("perc").innerHTML = calc + "%";
+    document.getElementById('spaceCount').innerHTML='('+textarea.value.length + '/' + cap +' symbols)';
 }
 
 function hide() {

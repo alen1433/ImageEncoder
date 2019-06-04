@@ -25,6 +25,11 @@ overflow: hidden;
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
+#cont::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 #placeholder, #settings {
     /* display: none; */
     font-size: 2rem;
@@ -57,7 +62,6 @@ overflow: hidden;
     position: absolute;
     z-index: 2;
     bottom: 0;
-    width: 30%;
     height: 10px;
     background-color: #1C94FF;
 }
@@ -76,6 +80,10 @@ overflow: hidden;
     height: 18rem;
     background-color: white;
     border-radius: 0.6rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+    left: -18%;
 }
 
 .settFormer {

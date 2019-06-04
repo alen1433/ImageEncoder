@@ -27,16 +27,16 @@
           <label id="imgAdd" class="btn">
             Add new image <input type="file" accept="images/.png, images/.jpeg" name="pic" id="picA2" multiple onchange="addPics2(); getSpace(document.getElementById('output'));" style="display: none;">
           </label>
-          <div id="sizeDis" class="d-flex">
+          <!-- <div id="sizeDis" class="d-flex">
             <span class="text-left mr-auto">Image Size:</span><span id="sizeCount" class="text-right">5MB</span>
-          </div>
+          </div> -->
           <div id="spaceDis">
             <div class="d-flex">
               <span class="text-left mr-auto">Space left:</span><span id="spaceCount" class="text-right">1.45MB</span>
             </div>
             <div class="fullBarDown"></div>
-            <div class="fullBarUp"></div>
-            <span class="text-right percent">30%</span>
+            <div id="fullBar" class="fullBarUp"></div>
+            <span id="perc" class="text-right percent">30%</span>
           </div>
           <div id="spaceMesg" class="">
             <p>Encoded Message:</p>
@@ -60,13 +60,14 @@
               <label class="btn btn-default btn-file">
                   UPLOAD <input type="file" name="pic" accept="images/.png, images/.jpeg" id="picA1" multiple onchange="addPics1(); getSpace(document.getElementById('output'));" style="display: none;">
               </label>
-                an image<br>or<br>Copy from link:
+                an image<br>
+                <!-- or<br>Copy from link:
                 <button id="btnPaste" type="button" class="btn btn-success" onclick="addPics3();">Paste</button>
               </h1>
             </div>
             <div class="col-12">
               <input id="linkIn" class=" d-flex mx-auto" type="text">
-              <h1 id="errorMessage" class="text-center hidden">Please enter a valid link</h1>
+              <h1 id="errorMessage" class="text-center hidden">Please enter a valid link</h1> -->
           </div>
         </div>
         <img id="output" class="hidden" />
