@@ -100,6 +100,7 @@ function addPics3(){
     if(linkIn.value == ""){
         error.classList.toggle("hidden");
     }else{
+        image.crossOrigin = "Anonymous";
         image.src = linkIn.value;
         if(document.getElementById("cont").childNodes.length == 0){
             displaySettings();
